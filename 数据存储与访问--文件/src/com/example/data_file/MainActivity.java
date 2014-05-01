@@ -77,6 +77,8 @@ public class MainActivity extends Activity {
 			
 			return rootView;
 		}
+		
+		//存储数据
 		@OnClick(R.id.bn_save)
 		public void save(View view){
 			String in = et_in.getText().toString();
@@ -94,6 +96,8 @@ public class MainActivity extends Activity {
 				e.printStackTrace();
 			}
 		}
+		
+		//获取数据
 		@OnClick(R.id.bn_get)
 		public void get(View view){
 			try {
