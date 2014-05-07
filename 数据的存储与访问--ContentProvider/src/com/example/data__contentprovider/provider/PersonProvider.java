@@ -64,6 +64,7 @@ public class PersonProvider extends ContentProvider {
 			return "vnd.android.cursor.item/person";
 		default:
 			break;
+			
 		}
 		return null;
 	}
