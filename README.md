@@ -1,3 +1,5 @@
+
+<pre>
 android_basic_review
 ====================
 
@@ -11,3 +13,4 @@ some android basic demos review
 过程中有待补充：
 1.ContactProvider的API研究
 2.多线程断点续传的代码实现
+</pre>
