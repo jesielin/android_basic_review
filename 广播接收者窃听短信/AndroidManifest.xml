@@ -24,6 +24,7 @@
             </intent-filter>
         </activity>
         <receiver android:name="com.example.listen_sms.SmsReceiver">
+            <!-- 想要截断短信，权限要设置为最高 -->
             <intent-filter android:priority="1000">
                 <action android:name="android.provider.Telephony.SMS_RECEIVED"/>
             </intent-filter>
