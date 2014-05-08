@@ -6,3 +6,8 @@ some android basic demos review
 一些android基础的小Demo，顺便熟悉git操作
 有些工程会用到xutils开源框架
 工程全部采用eclipse编写
+
+------------------------------------
+过程中有待补充：
+1.ContactProvider的API研究
+2.多线程断点续传的代码实现
