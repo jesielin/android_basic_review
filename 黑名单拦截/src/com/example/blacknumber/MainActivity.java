@@ -1,15 +1,16 @@
 package com.example.blacknumber;
 
 import android.app.Activity;
-import android.app.ActionBar;
 import android.app.Fragment;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.view.ViewGroup;
-import android.os.Build;
+import android.widget.Button;
 
 public class MainActivity extends Activity {
 
@@ -17,7 +18,6 @@ public class MainActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
-
 		if (savedInstanceState == null) {
 			getFragmentManager().beginTransaction()
 					.add(R.id.container, new PlaceholderFragment()).commit();
@@ -49,7 +49,12 @@ public class MainActivity extends Activity {
 	 */
 	public static class PlaceholderFragment extends Fragment {
 
+		private Intent intent;
+		private Button bn_start;
+		private Button bn_stop;
+
 		public PlaceholderFragment() {
+			
 		}
 
 		@Override
@@ -57,6 +62,26 @@ public class MainActivity extends Activity {
 				Bundle savedInstanceState) {
 			View rootView = inflater.inflate(R.layout.fragment_main, container,
 					false);
+			bn_start = (Button) rootView.findViewById(R.id.bn_start);
+			bn_stop = (Button) rootView.findViewById(R.id.bn_stop);
+			bn_start.setOnClickListener(new OnClickListener() {
+				
+				@Override
+				public void onClick(View v) {
+					intent = new Intent(getActivity(),BlackNumberService.class);
+					getActivity().startService(intent);
+				}
+			});
+			bn_stop.setOnClickListener(new OnClickListener() {
+				
+				@Override
+				public void onClick(View v) {
+					if(intent != null){
+						getActivity().stopService(intent);
+						intent = null;
+					}
+				}
+			});
 			return rootView;
 		}
 	}
