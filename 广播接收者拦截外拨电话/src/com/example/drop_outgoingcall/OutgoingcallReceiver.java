@@ -15,7 +15,5 @@ public class OutgoingcallReceiver extends BroadcastReceiver {
 			//abortBroadcast();
 			setResultData(null);
 		}
-
 	}
-
 }
