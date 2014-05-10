@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="#FFFFFF"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    >
+    <SurfaceView
+    android:layout_width="fill_parent" 
+    android:layout_height="240dip"
+    android:id="@+id/surfaceView"
+    />
+  <LinearLayout
+     android:orientation="horizontal"
+     android:layout_width="fill_parent"
+     android:layout_height="wrap_content"
+    >
+  <ImageButton
+      android:layout_weight="1"
+    android:layout_width="0dp" 
+    android:layout_height="80dp" 
+    android:src="@drawable/gtk_media_play_ltr"
+    android:background="@android:color/transparent"
+    android:id="@+id/play"
+    />
+<ImageButton
+    android:layout_weight="1"
+    android:layout_width="0dp" 
+    android:layout_height="80dp" 
+    android:background="@android:color/transparent"
+    android:src="@drawable/gtk_media_pause"
+    android:id="@+id/pause"
+    />
+<ImageButton
+    android:layout_weight="1"
+    android:layout_width="0dp" 
+    android:background="@android:color/transparent"
+    android:layout_height="80dp" 
+    android:src="@drawable/undo"
+    android:id="@+id/reset"
+    />
+<ImageButton
+    android:layout_weight="1"
+    android:layout_width="0dp" 
+    android:background="@android:color/transparent"
+    android:layout_height="80dp" 
+    android:src="@drawable/gtk_media_stop"
+    android:id="@+id/stop"
+    />
+  </LinearLayout>
+  
+</LinearLayout>
