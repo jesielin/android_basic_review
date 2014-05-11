@@ -126,6 +126,8 @@ public class MainActivity extends Activity {
 				public void onItemSelected(AdapterView<?> adapterView,
 						View view, int position, long id) {
 					Object item = adapterView.getItemAtPosition(position);
+					//Person person = (Person)adapterView.getItemAtPosition(position);
+
 					Toast.makeText(getActivity(), item.toString(), 0).show();
 				}
 				
@@ -136,9 +138,46 @@ public class MainActivity extends Activity {
 					//Toast.makeText(getActivity(), "Nothing choose", 0).show();
 				}
 			});
+			
+			/*
+			 * 可以用javabean实现他oString方法填充到arrayadapter中实现获取id又不用重写adapter的效果
+			 */
+//			ArrayAdapter<Person> adapter = new ArrayAdapter<Person>(this, android.R.layout.simple_spinner_item);
+//	        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+//	        adapter.add(new Person(12, "李明"));
+//	        adapter.add(new Person(100, "李明"));
+//	        adapter.add(new Person(62, "张天"));
 
+			
 			return rootView;
 		}
+		
+		class Person {
+			private Integer id;
+			private String name;
+			
+			public Person(Integer id, String name) {
+				this.id = id;
+				this.name = name;
+			}
+			public Integer getId() {
+				return id;
+			}
+			public void setId(Integer id) {
+				this.id = id;
+			}
+			public String getName() {
+				return name;
+			}
+			public void setName(String name) {
+				this.name = name;
+			}
+			@Override
+			public String toString() {
+				return name;
+			}
+		}
+
 	}
 
 }
