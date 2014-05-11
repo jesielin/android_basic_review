@@ -1,0 +1,71 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.select.MainActivity$PlaceholderFragment" >
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <RadioButton
+            android:id="@+id/java"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="java" />
+
+        <RadioButton
+            android:id="@+id/dotNet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="dotNet" />
+
+        <RadioButton
+            android:id="@+id/php"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="PHP" />
+    </RadioGroup>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <CheckBox
+            android:id="@+id/checkboxjava"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="java" />
+
+        <CheckBox
+            android:id="@+id/checkboxdotNet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="dotNet" />
+
+        <CheckBox
+            android:id="@+id/checkboxphp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="PHP" />
+
+        <Button
+            android:id="@+id/checkboxButton"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="获取值" />
+    </LinearLayout>
+
+</LinearLayout>
