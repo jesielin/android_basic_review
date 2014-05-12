@@ -18,4 +18,6 @@ some android basic demos review
 4.Menu ActionBar 使用
 5.WebView 开发
 6.帧动画与补间动画
+7.样式与主题
+8.视频采集
 </pre>
